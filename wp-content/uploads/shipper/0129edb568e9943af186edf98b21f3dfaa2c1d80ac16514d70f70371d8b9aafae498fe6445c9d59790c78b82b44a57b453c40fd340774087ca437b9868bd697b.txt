@@ -1,0 +1,55 @@
+2019-05-01 19:58:42 :: Log file cleared
+2019-05-01 19:58:42 :: Migration start -- [localhost/OnslowSites/onslowsites.com <= onslowsites.com]: User-initiated, idle
+2019-05-01 19:59:35 :: Preflight check complete
+2019-05-01 19:59:38 :: Rescheduled at: 12
+2019-05-01 19:59:38 :: [Task 0 of 14]: Clean up target Hub data
+2019-05-01 19:59:42 :: No migration file present
+2019-05-01 19:59:42 :: Attempting remote export auto-start
+2019-05-01 19:59:42 :: Pinging remote domain
+2019-05-01 19:59:45 :: Remote domain reachable, attempting export
+2019-05-01 20:00:20 :: [Task 1 of 14]: Check remote system export status
+2019-05-01 20:00:22 :: No migration file present, remote export started
+2019-05-01 20:00:52 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:00:56 :: No migration file present, remote export started
+2019-05-01 20:01:26 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:01:28 :: No migration file present, remote export started
+2019-05-01 20:01:58 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:01:59 :: No migration file present, remote export started
+2019-05-01 20:02:29 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:02:31 :: No migration file present, remote export started
+2019-05-01 20:03:01 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:03:02 :: No migration file present, remote export started
+2019-05-01 20:03:32 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:03:33 :: No migration file present, remote export started
+2019-05-01 20:04:03 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:04:05 :: No migration file present, remote export started
+2019-05-01 20:04:35 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:04:37 :: No migration file present, remote export started
+2019-05-01 20:05:07 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:05:09 :: No migration file present, remote export started
+2019-05-01 20:05:39 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:05:50 :: No migration file present, remote export started
+2019-05-01 20:06:20 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:06:25 :: No migration file present, remote export started
+2019-05-01 20:06:55 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:06:56 :: No migration file present, remote export started
+2019-05-01 20:07:26 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:07:28 :: No migration file present, remote export started
+2019-05-01 20:07:58 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:08:00 :: No migration file present, remote export started
+2019-05-01 20:08:30 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:09:02 :: No migration file present, remote export started
+2019-05-01 20:09:32 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:09:34 :: No migration file present, remote export started
+2019-05-01 20:10:04 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:10:07 :: No migration file present, remote export started
+2019-05-01 20:10:37 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:10:38 :: No migration file present, remote export started
+2019-05-01 20:11:08 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:11:09 :: No migration file present, remote export started
+2019-05-01 20:11:39 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:11:41 :: No migration file present, remote export started
+2019-05-01 20:12:11 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:12:13 :: No migration file present, remote export started
+2019-05-01 20:12:43 :: [Task 1 of 14]: Export remote system
+2019-05-01 20:12:44 :: No migration file present, remote export started
