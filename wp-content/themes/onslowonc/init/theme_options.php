@@ -55,6 +55,8 @@ class MyThemeOptions
 			'type'   => 'textarea',
 		) );
 
+		
+
 		/*******************
 		* Social Options
 		*******************/
@@ -269,4 +271,6 @@ add_action( 'customize_register'    , array( 'MyThemeOptions' , 'register' ) );
 add_theme_support( 'automatic-feed-links' );
 //Add featured image support
 add_theme_support( 'post-thumbnails' );
+//Add Custom Logo
+add_theme_support( 'custom-logo' );
 ?>

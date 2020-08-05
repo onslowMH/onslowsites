@@ -51,7 +51,7 @@
     <hgroup class="gradient">
         <h1 id="site-title" class="hidden"><?php bloginfo('name'); ?></h1>
         <h2 id="site-description" class="hidden"><?php bloginfo('description'); ?></h2>      
-        <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png" alt="" width="100%" height="100%"  /></a>
+        <div class="logo"><?php csl_CustomSiteLogo_show_logo();?></div>
           
 		<?php
 		//Grab header options
