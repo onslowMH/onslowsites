@@ -1,0 +1,8 @@
+[03-Dec-2019 12:34:51 America/Chicago] PHP Fatal error:  Call to undefined function get_template_directory() in /home4/onslowms/public_html/wp-content/themes/twentynineteen/functions.php on line 16
+[11-Dec-2019 10:22:52 America/Chicago] PHP Fatal error:  Call to undefined function get_template_directory() in /home4/onslowms/public_html/wp-content/themes/twentynineteen/functions.php on line 16
+[11-Dec-2019 15:25:35 America/Chicago] PHP Fatal error:  Call to undefined function get_template_directory() in /home4/onslowms/public_html/wp-content/themes/twentynineteen/functions.php on line 16
+[24-Jan-2020 10:33:37 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home4/onslowms/public_html/wp-content/themes/twentynineteen/404.php on line 12
+[24-Jan-2020 15:32:53 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home4/onslowms/public_html/wp-content/themes/twentynineteen/404.php on line 12
+[24-Jan-2020 18:46:17 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home4/onslowms/public_html/wp-content/themes/twentynineteen/404.php on line 12
+[24-Jan-2020 22:21:44 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home4/onslowms/public_html/wp-content/themes/twentynineteen/404.php on line 12
+[01-Jun-2020 11:30:31 America/Chicago] PHP Fatal error:  Call to undefined function get_template_directory() in /home4/onslowms/public_html/wp-content/themes/twentynineteen/functions.php on line 16

@@ -1,0 +1,83 @@
+/* =============================================================================
+   Typography
+   ========================================================================== */
+@import "variables";
+@import "mixins";
+//Defaults
+$blueHeaderColor: #335980 !default;
+$defaultDividerColor:#909090 !default;
+$greenHeaderColor:#57642f !default; 
+/* =============================================================================
+   Typography
+   ========================================================================== */ 
+h1,h2,h3,h4,h5,h6 {
+	margin:0;
+	padding:0;
+	
+}
+h2 {
+	font-size: 1.72em; //~17px
+	text-transform:uppercase;
+	color:$blueHeaderColor;
+	border-bottom:2px dotted $defaultDividerColor;
+	padding:13px 0;
+	font-family:$vigaFontStack;	
+}
+h3 {
+	font-size: 1.42em; //~17px
+	color: $greenHeaderColor;
+	
+	
+}
+aside h3 {
+    margin:.5em 0 .5em 10px;
+    @include blueHeader;
+}
+.widget_sp_image h3 {
+	margin:1em 0 .5em 0 ;
+	@include blueHeader;
+}
+#home_content_wrap section h3 {
+    font-family: $vigaFontStack;
+}
+
+h4 {
+	font-size:1.25em;//~15px
+	color: $blueHeaderColor;
+}
+h5 {
+	font-size: 1.17em;//~14px	
+}
+h6 {
+	font-size:1.08em;//~13px	
+}
+p {
+	margin: 1em 0;
+	font-size:13px;
+	&.read_more {
+		text-align:right;
+	}
+}
+#home_content_wrap section p {
+    margin:.5em 0;
+}
+
+figcaption {
+	font-size:11px;
+}
+blockquote {
+		
+}
+hr { 
+	display: block; 
+	height: 2px; 
+	border: 0; 
+	border-top: 2px dotted $defaultDividerColor; 
+	margin: 1em 0; 
+	padding: 0;
+	/* iPhone Wide Break Point and below ----------- */
+	@media only screen 
+	and (max-width : $iphoneWideBreakPoint) {
+		border-top:2px solid $mediumGreen2;				
+	}
+}

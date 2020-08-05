@@ -1,0 +1,24 @@
+@import "variables";
+@import "mixins";
+/* =============================================================================
+   Images
+   ========================================================================== */
+
+/*responsive*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+#sidebar img,
+.wp-caption,
+img {
+	max-width:100%;
+	height:auto;
+}
+
+img.aligncenter, .wp-caption.aligncenter {
+	margin: 0 auto 1.5em auto;
+	max-width:100%;
+	height:auto;	
+}

@@ -1,0 +1,287 @@
+@import "variables";
+@import "mixins";
+/* =============================================================================
+   Secondary containers
+   ========================================================================== */
+.widget {
+    padding-bottom:20px;
+}  
+/****Comment Form styles********/
+#respond h2 {
+  border:none;  
+}  
+  
+#mapviewer {
+    width:100%;
+    overflow:hidden;
+} 
+.contact_info_wrap {
+    @include borderBox;
+    float:left;
+    width:50%;
+    padding-right:2%;
+} 
+  
+#home_content_wrap {
+	background-color:#FFF;
+	section {
+	    
+		padding-bottom:20px;
+		margin-bottom:0;
+		padding-top:20px;
+		width:75%;
+		padding-left:0;
+		padding-right:0;
+		border-right:none;
+		
+		.widget {
+		    display:inline-block;
+		    vertical-align: top;
+		    @include borderBox;
+			width:33%;
+			height:210px;
+			padding-right:0;
+			padding-left:3.3%;
+			margin-bottom:25px;
+			overflow:hidden;
+			
+			a {
+				display:inline-block;
+			}
+			@include breakpoint(nav_break_point) {
+				margin-bottom:30px;
+				padding-right:3.2%;
+				padding-left:0;
+				width:29.066%;
+				&:first-child, &:nth-child(4n+4) {  
+				  padding-left:3.2%;
+				}
+			}
+			@include breakpoint(iphone_landscape) {
+				height:auto;
+				margin-bottom:40px;
+				&:first-child, &:nth-child(4n+4) {  
+				  padding-left:4%;
+				}
+				margin-bottom:30px;
+				padding-right:4%;
+				padding-left:4%;
+				width:42%;
+				p, .widget_sp_image-description {
+					display:none;
+				}
+			}
+			@include breakpoint(iphone_portrait) {
+			    display:block;
+			    width:auto;
+				padding-right:0%;
+				padding-left:0%;
+				margin:0 0 10px 14%;
+				&:first-child, &:nth-child(4n+4) {  
+				  padding-left:0%;
+				}
+			}
+			
+		}
+		h3 {
+			margin:.5em 0;
+			@include blueHeader;
+		}
+		@include breakpoint(nav_break_point) {
+			width:100%;
+			float:none;
+		}
+		
+	}
+	aside {
+		float:left;
+		padding-bottom:0;
+		margin-bottom:0;
+		padding-top:20px;
+		width:25%;
+		padding-left:0;
+		padding-right:0;
+		@include breakpoint(iphone_landscape) {
+			padding-top:0;
+		}
+		.widget {
+		    &.news_wrap {
+                height:auto;
+            }
+			width:85%;
+			height:210px;
+			padding-left:7%;
+			padding-right:0;
+			margin-bottom:25px;
+			overflow:hidden;
+			@include breakpoint(nav_break_point) {
+				width:45%;
+				float:left;
+				padding-left:3.3%;
+				margin-bottom:30px;
+				h4.device_only {
+				    display:none;
+				}
+			}
+			@include breakpoint(iphone_landscape) {
+				height:auto;
+				p, .widget_sp_image-description, h4:not(.device_only) {
+					display:none;
+				}
+				h4.device_only {
+                    display:block;
+                }
+			}
+			@include breakpoint(iphone_portrait) {
+				width:93.4%;
+			}
+		}
+		
+		@mixin homeSecondaryRailHeader() {
+			background-color:$blueHeaderBackgroundColor;
+			font-family:$vigaFontStack;
+			font-weight:strong;
+			padding:8px 8px 0px 8px;
+		}			
+			
+		h3 {
+			@include homeSecondaryRailHeader;
+			margin: 0 0 0px 0;
+			color:white;
+			font-size:1em;
+			
+		}
+		a.read_all {
+			@include homeSecondaryRailHeader;
+			font-weight:normal;
+			display:block;
+			text-align:right;
+			padding:0 8px 4px 8px;
+			color:white;
+			font-style:italic;
+			text-decoration:underline;
+			&:hover {
+				text-decoration:none;
+			}
+		}
+		
+		h4 {
+			color:$blueHeaderColor;
+			margin:15px 0 12px 0;
+			font-weight: normal;
+		}
+		p {
+			font-size:1.083em;/*~13px*/
+			font-weight:normal;
+			margin:0;
+			a.read_more {
+				display:inline;
+				color:$mediumGreen;
+				margin:0;
+				padding:0;
+				text-decoration:underline;
+				&:hover {
+					text-decoration:none;
+				}
+			}
+		}
+		@include breakpoint(nav_break_point) {
+			width:100%;
+			float:none;
+		}
+		@include breakpoint(iphone_landscape) {
+			a.back_to_top {
+				margin-right:3.3%;
+				
+			}
+		}
+		
+		
+		
+	}
+	
+	
+}   
+   
+   
+.meta {
+	padding-bottom:5px;
+}   
+.excerpt_wrap {
+	.img_wrap {
+		width:30%;
+		@include imgAlignLeft;		
+	}
+	p {
+		margin:0;
+		padding:0;
+	}
+}   
+.single_wrap {
+	.img_wrap {
+		width:38%;
+		@include imgAlignRight;		
+	}
+	.meta {
+	    width:50%;
+	    display: inline-block; 
+	}
+	p {
+		margin:0;
+		padding:0;
+	}
+}   
+.team_member_wrap {
+	display:inline-block;
+	hgroup {
+		padding:5px 0;
+	}
+	h5 {
+		font-size:1.08em;//~13px
+		color:$mediumGreen;
+	}
+	h6 {
+		font-size:1em;
+		font-weight:normal;
+	}
+	.img_wrap {
+		max-width:75px;
+		width:100%;
+		
+	}
+	@include breakpoint(iphone_portrait) {
+		padding-left:4%;
+		width:29.3%;
+	}
+}
+.utility_wrap {
+	float:right;
+	span.phone {
+		text-transform:uppercase;
+		line-height:21px;
+		padding-right:15px;
+	}
+	a.social {
+		line-height:21px;
+		display:inline-block;
+		text-indent:-9999px;
+		width:21px;
+		height:21px;
+		background-image: url(../images/social-icons.png);
+		background-repeat:no-repeat;
+		background-position:left top;
+		&.twitter {
+			background-position:right top;
+		}
+	}
+	@include breakpoint(iphone_landscape) {
+		float:none;
+		margin-top:15px;
+	}
+}
+   
+.subhead_wrap {
+	h2 {
+		margin-bottom:20px;
+	}
+}  

@@ -1,0 +1,58 @@
+//
+// Red Hammer Theme Variables
+// --------------------------------------------------
+$grid-gutter-width: 60px;//override bootstrap 30px default
+
+// Basic Colors
+$orange: #d67b21;
+$orange_2: #faa653;
+$mediumBlue: #b5c8dc;
+$darkBlue_1: #335980;
+$darkBlue_2: #083057;
+$darkBlue_3: #13406c;
+$darkBlue_4: #00457c;
+$darkBlue_5: #4b6f94;
+$darkBlue_6: #11406b;
+
+$tan: #FFD8A3;
+//Item colors
+$brand-primary:$darkBlue_3;
+$carouselBorderColor: $mediumBlue;
+$carouselControlColor: $darkBlue_1;
+$borderColor: $orange;//3px high border
+$paragraphBlue: $darkBlue_1;
+$headings-color: $darkBlue_1;
+$textOrange:$orange;
+$sliderControlBlue: $darkBlue_2;
+$footerBackgroundColor:$darkBlue_3;
+$bannerCornerColor:$darkBlue_5;
+$bodyBackgroundColor: $tan;
+$navigationBorderColor: $darkBlue_6;
+$dividerColor: $orange_2;
+//Typography properties
+// Remember for proper Vertical Rhythm, add line height to font size for base typographical rhythmic unit and maintain that multiple throughout. 
+// Rhythmic unit = ((Line Height x Font Size)  - Font Size)
+// Example: Rhythmic unit =  (( 1.5 x 12px ) = 18px
+//$defaultFontSize: 1.4;
+//$defaultLineHeight: 1.429;// Base rhythmic unit = Line Height x Default Font Size = 1.429*14px = 20px
+$vigaFontStack:'Viga', sans-serif;
+$headings-font-family: $vigaFontStack;//override bootstrap
+
+// Typography
+// -------------------------
+$font-size-base:          14px;
+$font-size-h6:            $font-size-base;
+// Iconography
+// -------------------------
+
+$icon-font-path:"../fonts/";
+
+
+
+
+
+
+
+
+
+

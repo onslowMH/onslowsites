@@ -1,0 +1,17 @@
+/* =============================================================================
+   Lists
+   ========================================================================== */
+ul {
+    padding-left:20px;
+    padding-left:2rem;
+}
+/*Sometimes we like to list things in columns in our sidebar areas eg. about us sidebar */  
+ul.columns {
+	margin:30px 0 0 15px;
+        float:left;
+}
+ul.columns li {
+	float:left;
+	width:49%;
+		
+}

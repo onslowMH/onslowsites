@@ -1,0 +1,96 @@
+/* Form Styles */
+@import "sass/variables";
+@import "sass/mixins";
+//Defaults
+$inputBorderColor: #666666 !default;
+
+/* Webkit browsers add extra styling to the search input field. To remove them, add the following CSS code: */
+input[type=search] {	-webkit-appearance: none;}
+
+input[type="search"]::-webkit-search-decoration, 
+input[type="search"]::-webkit-search-cancel-button {
+	display: none;
+}
+
+/* Onward */
+
+.placeholder_fallback {
+	//display:none;
+	position: absolute;
+	left: 24px;
+	top: 6px;
+	color:#999;
+}
+
+.form_row {
+	position:relative;
+}
+label {
+	width:auto;
+	display:block;	
+}
+input[type="text"],input[type="email"] {
+	height:26px;
+	padding:0;
+	margin:0;
+	
+}
+input[type="text"],input[type="email"], textarea {
+	width:98.89%;	
+	border: 1px solid $inputBorderColor;
+		
+}
+textarea {
+	
+}
+input[type="submit"] {
+	
+}
+input.alert, textarea.alert {
+	background-color:#FF3;	
+}
+#js_message {
+	color:#FF3;
+	font-weight:bold;	
+}
+
+
+
+/*********************
+* Search Box
+********************/
+#searchform {
+	position:relative;
+	padding:10px 0;
+	width:180px;
+	background:transparent;
+	float:right;
+	input[type="text"] {
+		padding-left:24px;
+		width:85%;	
+	}
+	a {/*Our spyglass search link*/
+		position:absolute;
+		display:block;
+		border:none;
+		outline:none;
+		height:24px;
+		width:19px;
+		background:url(../images/spyglass.png) right center no-repeat;
+		top:2px;
+		left:0px;		
+	}
+	
+}
+
+/************************
+* Contact Us form
+************/
+.rh_contact_us_form_wrapper {
+	
+	margin:25px auto 0;
+	width:600px;	
+}
+#result_wrap {
+	text-align:center;	
+}

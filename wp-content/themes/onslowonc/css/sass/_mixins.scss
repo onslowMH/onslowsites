@@ -1,0 +1,69 @@
+@import "variables";
+//Mixins
+@mixin imgAlignLeft {
+	float:left; 
+	margin:0 1.67em 1.67em 0;
+}
+
+@mixin box-shadow( $shadow : 0px 0px 12px rgba(50, 50, 50, 0.75) ) {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow:   	$shadow;
+	box-shadow:         $shadow;
+}
+
+
+@mixin blueHeader {
+	font-size:1.25em;/*~15px*/
+	color:$blueHeaderColor;
+}
+
+//And for our responsive layout
+@mixin breakpoint($point) {
+	@if $point == nav_break_point {
+	@media only screen 
+	and (max-width : $navBreakPoint) {
+		/* Nav Break Point and below ----------- */
+		@content;
+	}
+  }
+  @if $point == nav_break_point_retina {
+	@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width : $navBreakPoint), 
+	only screen and (min-resolution: 192dpi) and (max-width : $navBreakPoint) { 
+		/* Retina-specific stuff here */
+		@content;
+	}
+  }
+  @if $point == iphone_landscape {
+    /* iPhone Wide Break Point and below ----------- */
+	@media only screen 
+	and (max-width : $iphoneWideBreakPoint) {
+		@content;
+	}
+  }
+  @if $point == iphone_landscape_retina {
+	@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width : $iphoneWideBreakPoint), 
+	only screen and (min-resolution: 192dpi) { 
+		/* Retina-specific stuff here */
+		@content;
+	}
+  }
+  @else if $point == iphone_portrait {
+    /* iPhone Portrait Break Point and below ----------- */
+	@media only screen 
+	and (max-width : $iphonePortraitBreakPoint) {
+		@content;
+	}
+  }
+  @else if $point == iphone_portrait_retina {
+    @media 
+	only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width : $iphonePortraitBreakPoint), 
+	only screen and (min-resolution: 192dpi) { 
+		/* Retina-specific stuff here */
+		@content;
+	}
+  }
+}
+
+

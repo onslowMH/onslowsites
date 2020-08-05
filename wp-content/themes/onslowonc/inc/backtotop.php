@@ -1,0 +1,1 @@
+<a class="back_to_top" href="#page_wrap">Back to top</a>

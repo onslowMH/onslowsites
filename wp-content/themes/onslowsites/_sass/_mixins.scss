@@ -1,0 +1,118 @@
+@import "variables";
+// General Mixins
+/**
+* rem Font size mixin. Assumes 62.5% font size set on html tag
+* Usage:
+*   p {
+*        @include font-size(13);
+*      }
+*/
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin boxSizing($atts: border-box) {
+    -moz-box-sizing: $atts;
+    -webkit-box-sizing: $atts; 
+    box-sizing: $atts;
+}
+
+@mixin shadow( $atts: 3px 3px 3px rgba(0, 0, 0, 0.32) ) {
+	box-shadow: $atts;
+	-moz-box-shadow: $atts;
+	-webkit-box-shadow: $atts;
+}
+
+@mixin roundedCorners($radius: 16px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin roundedCorner($topLeft: 0, $topRight: 0,$bottomLeft: 0, $bottomRight: 0) {
+	-webkit-border-top-left-radius: $topLeft;
+	-webkit-border-top-right-radius: $topRight;
+	-webkit-border-bottom-right-radius: $bottomRight;
+	-webkit-border-bottom-left-radius: $bottomLeft;
+	-moz-border-radius-topleft: $topLeft;
+	-moz-border-radius-topright: $topRight;
+	-moz-border-radius-bottomright: $bottomRight;
+	-moz-border-radius-bottomleft: $bottomLeft;
+	border-top-left-radius: $topLeft;
+	border-top-right-radius: $topRight;
+	border-bottom-right-radius: $bottomRight;
+	border-bottom-left-radius: $bottomLeft;
+}
+
+
+
+//Typography mixins
+@mixin headings($from:1,$to:6) {
+	@for $i from $from through $to {
+		@if $i==$from { 
+			h#{$i} {
+				@content
+			}
+                } @else { 
+			h#{$i} {
+				@extend h1;
+			}
+		
+                }
+	}
+}
+
+//Form related mixins
+@mixin otherTextInputs() {
+	input[type="text"],input[type="email"] {
+		@content;	
+	}
+}
+
+
+
+/**
+* And for our responsive layout
+* Usage:
+*   @include breakpoint(nav_break_point) {
+*       float:none;
+*       width:100%;
+*   }
+*/
+@mixin breakpoint($point) {
+    @if $point == nav_break_point {
+    @media only screen 
+    and (max-width : $navBreakPoint)
+    {
+        /* Nav Break Point and below ----------- */
+        @content;
+    }
+  }
+  @if $point == phone_break_point {
+    @media only screen 
+    and (max-width : $phoneBreakPoint) {
+        /* Nav Break Point and below ----------- */
+        @content;
+    }
+  }
+  
+}
+/**
+* Use for pixel responsiveness
+*   Usage: 
+*   @include breakpointSize(1030px) {
+*        padding:0 1%;
+*    } 
+*/
+@mixin breakpointSize($point) {
+	
+	@media only screen 
+	and (max-width : $point)
+	{
+		/* S$point screen size and below ----------- */
+		@content;
+	}
+  
+  
+}

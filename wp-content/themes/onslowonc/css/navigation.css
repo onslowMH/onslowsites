@@ -1,0 +1,132 @@
+/* Navigation */
+nav#main-nav {
+  background: #57642f;
+  border-top: 1px solid #57632f;
+  border-bottom: 1px solid #57632f;
+  background-image: url(../images/main_nav_bg.png);
+  background-repeat: repeat-x;
+  background-position: top left;
+}
+nav#main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+nav#main-nav ul li {
+  float: left;
+}
+nav#main-nav ul li a {
+  color: #FFF;
+  font-size: 13px;
+  font-family: "Viga", sans-serif;
+  width: 60px;
+  padding: 0 30px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  display: block;
+  background-image: url(../images/main_nav_bg.png);
+  background-position: 120px -50;
+  background-repeat: no-repeat;
+}
+nav#main-nav ul li a span {
+  display: inline;
+  display: inline-table;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 20px;
+  *margin-top: expression(this.offsetHeight < this.parentNode.offsetHeight ? parseInt((this.parentNode.offsetHeight - this.offsetHeight) / 2) + "px" : "0");
+}
+nav#main-nav ul li a:hover {
+  background-position: 0px -50px;
+}
+nav#main-nav ul li.current_page_item > a, nav#main-nav ul li.current-menu-ancestor > a, nav#main-nav ul li.current-menu-item > a, nav#main-nav ul li.current-menu-parent > a {
+  background-position: 0px -50px;
+  color: #FFF;
+}
+
+/************Subnav******************/
+nav#main-nav ul li a span.child_indicator {
+  display: none;
+}
+
+nav#main-nav ul li.has_children > a span.child_indicator {
+  display: inline;
+}
+
+#main-nav ul li {
+  position: relative;
+  /*When the master page section page is active...all sublinks show as active...need to disable that*/
+}
+#main-nav ul li ul {
+  position: absolute;
+  z-index: 100;
+  display: none;
+  margin: 0px 0 0 0px;
+  /*Our Wordpress current page class selector for subnav items*/
+}
+#main-nav ul li ul li {
+  border-right: none;
+  border-top: 1px solid #57632f;
+}
+#main-nav ul li ul li a {
+  /*padding:5px 10px;*/
+  color: #FFF;
+  width: 60px;
+  padding: 0 30px;
+  height: 50px;
+}
+#main-nav ul li ul li.current_page_item a {
+  /*text-decoration:underline;*/
+  color: #FFF;
+}
+#main-nav ul li.current-menu-parent a {
+  /*text-decoration:underline;*/
+  /*color: #000;*/
+}
+#main-nav ul li.current_page_item ul li a {
+  color: #FFF;
+}
+#main-nav ul li.current_page_item ul li a:hover {
+  color: #FFF;
+}
+#main-nav ul li.current_page_item > ul li.current_page_item a {
+  color: #FFF;
+}
+#main-nav ul li:hover ul {
+  display: block;
+  z-index: 100;
+  padding: 0;
+  margin-left: 0px;
+}
+
+/*Our footer nav*/
+nav#footer-nav {
+  margin: 0 0 20px 0;
+  font-size: 11px;
+}
+nav#footer-nav ul {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav#footer-nav ul li {
+  display: inline;
+  line-height: 1;
+}
+nav#footer-nav ul li span.separator {
+  padding: 0 .6%;
+}
+nav#footer-nav ul li:first-child span.separator {
+  display: none;
+}
+nav#footer-nav ul li a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+nav#footer-nav ul li a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,163 @@
+//SASS Variables
+@import "sass/variables";
+@import "sass/mixins";
+$mainNavBgColor:#57642f !default;
+$vigaFontStack:'Viga', sans-serif !default;
+$mainNavBorderColor: #57632F !default;
+
+/* Navigation */
+nav#main-nav {
+	background:	$mainNavBgColor;
+	border-top:1px solid $mainNavBorderColor;
+	border-bottom:1px solid $mainNavBorderColor;
+	background-image:url(../images/main_nav_bg.png);
+	background-repeat:repeat-x;
+	background-position:top left;
+	ul {
+		list-style:none;
+		margin:0;
+		padding:0;
+		
+		float:left;		
+		li {
+			float:left;
+			a {
+				color:#FFF;
+				font-size:13px;
+				font-family:$vigaFontStack;
+				width: 60px;
+				padding: 0 30px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				display: block;
+				background-image:url(../images/main_nav_bg.png);
+				background-position:120px -50;
+				background-repeat:no-repeat;
+				span {
+					display:inline;
+					display:inline-table;
+					display:inline-block;
+					vertical-align:middle;
+					line-height: 20px;
+					*margin-top: expression(this.offsetHeight < this.parentNode.offsetHeight ? parseInt((this.parentNode.offsetHeight - this.offsetHeight) / 2) + "px" : "0");
+				}
+				&:hover {
+					background-position:0px -50px;
+				}
+			}
+			&.current_page_item  > a,&.current-menu-ancestor  > a, &.current-menu-item > a, &.current-menu-parent > a  {
+				background-position:0px -50px;
+				color:#FFF;
+			}			
+		}
+	}
+}
+
+
+
+/************Subnav******************/
+nav#main-nav ul li a span.child_indicator {
+	display:none;
+}
+nav#main-nav ul li.has_children > a span.child_indicator {
+	display:inline;
+}
+#main-nav  {
+	ul {
+		li {
+			position:relative;
+			ul {
+				position:absolute;
+				z-index:100;
+				display:none;
+				margin:0px 0 0 0px;
+				li {
+					border-right: none;
+					border-top:1px solid $mainNavBorderColor;
+					
+					a {
+						/*padding:5px 10px;*/
+						color: #FFF;
+						width: 60px;
+						padding: 0 30px;
+						height: 50px;
+						
+					}
+				}
+				/*Our Wordpress current page class selector for subnav items*/
+				li.current_page_item a {
+					/*text-decoration:underline;*/
+					color: #FFF;
+				}
+				li:last-child {
+	
+				}
+					
+			}
+			&.current-menu-parent a {
+				/*text-decoration:underline;*/
+				/*color: #000;*/
+			}
+			/*When the master page section page is active...all sublinks show as active...need to disable that*/
+			&.current_page_item  {
+				ul li a  {
+					color:#FFF;
+					&:hover {
+						color:#FFF;	
+					}
+				}	
+				
+				> ul li.current_page_item a {
+					color:#FFF;	
+				}
+			}
+			&:hover ul  {
+				display:block;
+				z-index:100;
+				padding:0;
+				margin-left:0px;						
+			}
+		}		
+	}	
+}
+
+
+
+/*Our footer nav*/
+
+
+nav#footer-nav {
+	margin: 0 0 20px 0;
+	font-size:11px;
+	ul {
+		width:100%;
+		
+		list-style:none;
+		margin:0;
+		padding:0;
+		li {
+			display:inline;
+			line-height:1;
+			
+			span.separator {
+				padding:0 .6%;
+			}
+			&:first-child span.separator {
+				display:none;
+			}
+			a {
+				margin:0;
+				padding:0;
+				text-decoration:none;
+				&:hover {
+					text-decoration:underline;
+				}
+			}
+		}
+		
+	}
+}
+
+
+

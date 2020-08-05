@@ -1,0 +1,56 @@
+/* =============================================================================
+   Links
+   ========================================================================== */
+a, a:hover, a:active, a:focus {
+    outline: 0;
+}
+a:hover, a:focus {
+    color:inherit;
+}
+h5 a, h4 a {
+    color:$headings-color;
+}
+h6 a {
+    color:#33597F;
+}
+.read_more {   
+    text-transform: lowercase;
+    color: $orange;
+    font-style: italic;
+    font-weight: normal;
+    text-decoration: underline;
+    font-size:85%;
+    &:hover {
+        color:$orange_2;
+    }
+}
+a.phone, span.phone {
+    color:#000;
+    text-transform: uppercase;
+}
+.banner_wrap span.phone {
+    font-weight:bold;
+    margin-right:6px;
+    display:inline-block;
+    
+}
+footer a.phone, .nav_wrap a.phone, footer span.phone, .nav_wrap span.phone {
+    margin-top:20px;
+    margin-top:2rem;
+/*    display:inline-block !important;*/
+    text-align:center;
+    
+
+}
+.up-caret {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 16px solid $textOrange;
+    display: inline-block;
+    height: 0;
+    opacity: 1;
+    vertical-align: top;
+    width: 0;
+
+}
+

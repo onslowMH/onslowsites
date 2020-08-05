@@ -1,0 +1,47 @@
+//SASS Variables
+
+//colors
+$footerColor:#96a077;
+$lightBlue:#e6f1fa;
+$masteadHeaderCenterGradientColor:#f7fafd;//light light blue
+$darkBlue: #335980;
+$mediumBlue: #69A1C5;
+$mediumGray:#909090;
+$darkGray: #666666;
+$lightGreen:#eef2e2;
+$mediumGreen:#57642f;
+$mediumGreen2:#57632F; 
+$mediumGreen3:#6a763a;
+$mediumGreen4:#728148;
+
+//Container Background Colors
+$bodyBackgroundColor:$lightGreen;
+
+//Navigation Colors
+$mainNavBorderColor: $mediumGreen2;
+$mainNavBgColor:$mediumGreen;
+$backToTopColor:$mediumGreen3;
+
+//Typography Colors
+$blueHeaderColor:$darkBlue;
+$blueHeaderBackgroundColor:$mediumBlue;
+$greenHeaderColor: $mediumGreen; 
+$defaultDividerColor:$mediumGray;
+$textLinkColor:#57642F;
+ 
+//Forms Colors
+$inputBorderColor: $darkBlue;
+$labelColor: $mediumGreen4;
+
+//font 
+$font-size: 12px;
+$line-height: 1.4; 
+$vigaFontStack:'Viga', sans-serif;
+$helveticaFontStack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$defaultFontStack: $helveticaFontStack;
+
+//Responsive Design Variables
+$navBreakPoint:800px;
+$iphoneWideBreakPoint:535px;
+$iphonePortraitBreakPoint:360px;

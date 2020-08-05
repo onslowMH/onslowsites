@@ -1,0 +1,190 @@
+/*
+Homepage Carousel styles
+*/
+
+
+#myCarousel {
+    overflow:hidden;
+    margin:0px auto;
+    display:block;
+    
+    @include boxSizing();
+    border-bottom:4px solid $orange;
+    height:95%;
+    @media (min-width: $screen-md-max) { 
+        height:350px;
+        margin-top:0;
+        border-top:none;
+    }
+    .item a {
+        width:354px;
+        margin-left:0px;
+        @media (min-width: $screen-xs-min) { 
+            margin-bottom:-4px;//fix for whitespace above border
+            margin-top:-1px;
+            margin-left:-1px;
+            margin-right:-1px;
+            width:100%;
+            
+            
+        }
+    }
+    .carousel-caption {        
+        background-color:#FFF;
+        opacity:0.8;
+        filter:alpha(opacity=80); /* For IE8 and earlier */
+        position: absolute;
+        left: 0;
+        right: 0; 
+        top:0;
+        bottom: auto;
+        z-index: 10;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left:5%;
+        padding-right:5%;
+        color: white;
+        text-align: left;
+        text-shadow: none;
+        @media (min-width: $screen-md-max) { 
+            
+            padding-left:30px;
+            padding-right:30px;
+
+        }
+        h2 {
+
+            @media (max-width: $screen-sm-max) { 
+                font-size:22px;
+                font-size: 2.2rem;
+            }
+            margin:0;
+        }
+        p {
+            color:#000;
+            margin:0;
+            /*            font-size:15px;*/
+            display:none;
+            @media (min-width: $screen-sm-max) { 
+                display:inline;
+            }
+        }
+        span.learn_more {
+            @media (min-width: $screen-sm-max) { 
+                display:none;
+            } 
+        }
+        span.punctuation {
+            display:none;
+            @media (min-width: $screen-sm-max) { 
+                display:inline;
+            } 
+        }
+        a.learn_more {
+            color:$headings-color;
+            font-weight:bold;
+            font-family: $vigaFontStack;
+            display:none;
+            @media (min-width: $screen-sm-max) { 
+                display:inline;
+            }
+        }
+
+    }
+    //Little pagination indicators. Display only on desktop.
+    .carousel-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: auto;
+        right:30px;
+        z-index: 15;
+        width: auto;
+        margin-left: -30%;
+        padding-left: 0;
+        list-style: none;
+        text-align: right;
+        display:none;
+        @media (min-width: $screen-sm-max) { 
+                display:inline-block;
+            }
+    }
+    .carousel-indicators li {
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        margin: 1px;
+        text-indent: -999px;
+        border: 2px solid white;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: $carouselControlColor;
+    }
+    .carousel-indicators .active {
+        margin: 0;
+        width: 15px;
+        height: 15px;
+        background-color: $orange;
+    }
+    //Left and right arrows
+    .carousel-control.left, .carousel-control.right {
+        z-index:900;
+        filter:none;
+        background-image:none;
+        width: 24px;
+        height:24px;
+        @include roundedCorners(24px);
+        border:2px solid #FFF;
+        background-color:$carouselControlColor;        
+        color:#FFF;
+        top:30%;
+
+        margin-top:-12px;
+        @media (min-width: $screen-sm-max) { 
+            display:none;
+        }
+        @media (min-width: $screen-xs-min) { 
+            top:35%;
+
+        }
+        @media (min-width: $screen-xs-min) { 
+            top:40%;
+
+        }
+
+    }
+    .carousel-control.left {
+        left:5%;
+    }
+    .carousel-control.right {
+        right:5%;
+    }
+    .left-caret, .right-caret {              
+        margin-top:25%;
+        margin-left:-10%;
+    }
+    .right-caret {
+        margin-left:10%;
+
+    }
+}
+.left-caret {    
+    border-right:10px solid #FFF;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    display: inline-block;
+    height: 0;
+    opacity: 1;
+    vertical-align: top;
+    width: 0;
+}
+.right-caret {    
+    border-left:10px solid #FFF;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    display: inline-block;
+    height: 0;
+    opacity: 1;
+    vertical-align: top;
+    width: 0;
+}
+

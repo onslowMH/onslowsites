@@ -1,0 +1,201 @@
+@import "variables";
+@import "mixins";
+//Defaults
+$defaultFontStack: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$footerColor:#96a077 !default;
+$lightBlue:#e6f1fa !default;
+$font-size: 12px !default;
+$line-height: 1.4 !default;
+$mediumGreen:#57642f !default; 
+
+
+/* Global styles */
+/*From code.trac.wordpress.org/ticket/11928*/
+.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+/*From the WP codex. These styles can be applied to images in blog posts*/
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {@include imgAlignLeft;}
+figure.alignleft {@include imgAlignLeft;}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+.alignright {float:right; }
+.alignleft {float:left; }
+.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+/* =============================================================================
+   Principal elements and containers
+   ========================================================================== */
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;	
+}
+
+body {
+	min-width:320px;
+	font: #{$font-size}/#{$line-height} $defaultFontStack;
+	background:#FFF;
+	
+}
+#outer_page_wrap {
+	height:100%;
+	margin:0 auto;
+	padding: 0 2%;
+	max-width:960px;
+	margin: 0px auto;
+	
+}
+#page_wrap {
+	background:$footerColor;
+	@include box-shadow();	
+		
+}
+.lt-ie9 #page_wrap {
+	border:1px solid black;
+		
+}
+
+
+#masthead {
+	hgroup{
+		/*Total height is 110px by design*/
+		height:70px;
+		padding-left:2%;
+		padding-right:1.5%;
+		padding-bottom:25px;
+		padding-top:15px;
+		background: $lightBlue; /* Old browsers */
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U2ZjFmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2Y3ZmFmZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNmYwZmEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: -moz-linear-gradient(left,  $lightBlue 0%, #f7fafd 50%, #e6f0fa 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,$lightBlue), color-stop(50%,#f7fafd), color-stop(100%,#e6f0fa)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left,  $lightBlue 0%,#f7fafd 50%,#e6f0fa 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left,  $lightBlue 0%,#f7fafd 50%,#e6f0fa 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left,  $lightBlue 0%,#f7fafd 50%,#e6f0fa 100%); /* IE10+ */
+		background: linear-gradient(to right,  $lightBlue 0%,#f7fafd 50%,#e6f0fa 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f1fa', endColorstr='#e6f0fa',GradientType=1 ); /* IE6-8 */
+		
+		@include breakpoint(nav_break_point) {
+			height:auto;
+		}
+		@include breakpoint(nav_break_point_retina) {
+			//background:red;
+		}
+		@include breakpoint(iphone_landscape) {
+			text-align:center;
+			
+		}
+		
+	}
+	.logo {
+		padding-top:20px;
+		display:inline-block;
+		max-width:543px;
+		max-height:44px;
+		width:54.3%;
+		float:left;
+		@include breakpoint(iphone_landscape) {
+			float:none;
+			width:100%;
+		}
+		
+	}
+}
+#content_wrap {
+	overflow:hidden;
+	background:#FFF;
+	
+}
+
+section, aside {
+	/*equal column heights*/
+	padding-bottom:1000em;
+	margin-bottom:-1000em;
+	@include breakpoint(iphone_landscape) {
+		padding-bottom:0em;
+		margin-bottom:0em;
+	}
+	
+}
+section {
+	float:left;
+	padding-left:2.5%;
+	padding-right:2.5%;
+	width:62.38%;
+	border-right:1px solid $mediumGreen;
+	.inside {
+		padding-top:17px;
+		padding-bottom:30px;
+		
+	}
+	@include breakpoint(iphone_landscape) {
+		float:none;
+		border-right:none;
+		width:95%;
+		.inside {
+			border-bottom:2px solid $mediumGreen2;
+		}
+	}
+	
+}
+aside {
+	float:right;
+	width:22.32%;
+	padding-left:5%;
+	padding-right:5%;
+	.inside {
+		padding-top:30px;
+		padding-bottom:30px;
+		
+	}
+	@include breakpoint(iphone_landscape) {
+		float:none;
+		width:100%;
+		padding-left:0%;
+		padding-right:0%;
+		.inside {
+			.widget {				
+				width:45%;
+				float:left;
+				padding-left:2.5%;
+				padding-right:2.5%;
+				margin-bottom:30px;			
+			}
+			a.back_to_top {
+				margin-right:2.5%;
+				margin-bottom:40px;
+				margin-top:40px;
+			}
+		}
+	}
+	@include breakpoint(iphone_portrait) {
+		.inside {
+			.widget {				
+				width:60%;
+				padding-left:20%;
+				padding-right:20%;
+						
+			}
+		}
+	}
+}
+
+
+/*Our Footer*/
+footer {
+	font-family:$defaultFontStack;
+	color:#FFF;
+	text-align:center;
+	padding:20px 5%;	
+	.logo {
+		display:block;
+		max-width:59px;
+		max-height:50px;
+		//width:5.9%;
+		margin:0 auto;
+	}
+	h1, h2, h3, h4, h5, h6 , p{
+		color:#FFF;
+	}
+	
+	
+}

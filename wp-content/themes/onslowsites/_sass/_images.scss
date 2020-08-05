@@ -1,0 +1,67 @@
+/* =============================================================================
+   Images
+   ========================================================================== */
+/*responsive*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+#sidebar img,
+.wp-caption,
+img {
+    max-width:100%;
+    height:auto;
+}
+
+.rh_static_map img {
+    @include roundedCorners(6px);
+}
+
+#header_img_wrap {
+    overflow:hidden;
+    height:100%;
+    display:block;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+
+}
+
+#header_img {
+    position:absolute;
+    top:0;
+    right:auto;
+    left:0;
+    z-index:1;
+    max-width:2000px;
+    height: 160px;
+    @media (min-width: $screen-sm-max) { 
+        right:0;
+        left:auto;
+    }
+
+}
+
+#content_wrap {
+    img {
+        border: 2px solid $orange; 
+    }
+    #featured_img_wrap img {
+        border:none;
+    }
+}
+
+.widget_sp_image {
+    a {
+        display:inline-block; 
+    }
+    img {
+
+        border: 2px solid $orange;
+    }
+}
+
+
+

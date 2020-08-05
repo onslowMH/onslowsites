@@ -1,0 +1,41 @@
+@import "variables";
+@import "mixins";
+/* =============================================================================
+   Utilities
+   ========================================================================== */
+   
+/*Old IE alert...requires Modernizr*/ 
+.lt-ie9 .home .old_ie {
+	display:block;	
+}
+.old_ie {
+	display:none;
+	text-align:center;
+	width:80%;
+	max-width:900px;
+	margin:0 auto;	
+}
+
+/*Javascript alert...requires Modernizr*/
+.js .js-off {
+	display:none;	
+}
+.no-js .js-off {
+	display:block;
+	text-align:center;
+}
+
+.screen-reader-text {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+em {
+	font-style:normal;
+	font-weight:bold;	
+}
+div.hr {
+	border-bottom:1px dashed #515151;
+	height:1px;	
+}

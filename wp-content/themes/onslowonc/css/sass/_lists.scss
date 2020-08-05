@@ -1,0 +1,15 @@
+@import "variables";
+@import "mixins";
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/*Sometimes we like to list things in columns in our sidebar areas eg. about us sidebar */  
+ul.columns {
+	margin:30px 0 0 15px;		
+}
+ul.columns li {
+	float:left;
+	width:150px;
+		
+}

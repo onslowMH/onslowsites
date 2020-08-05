@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* Custom Plugin Styles for the WP admin area */
+hr.rh_separator {
+	margin:18px 0;	
+}
+.rh_meta_box input[type="text"] {
+	width:100%;
+}
+
+/*Utilities*/
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display:table;
+}
+.clearfix:after {
+	clear:both;	
+}

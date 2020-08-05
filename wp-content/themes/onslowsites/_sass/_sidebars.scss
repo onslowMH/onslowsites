@@ -1,0 +1,20 @@
+/*
+Display sidebars based on body class
+*/
+.rail, .primary .rail.default, .secondary .rail.default, .contact .rail.default {
+    display:none;
+}
+.rail.default {
+    display:block;
+}
+.primary .rail.primary {
+    display:block;
+}
+.secondary .rail.secondary {
+    display:block;
+}
+.contact .rail.contact {
+    display:block;
+    text-align:center;
+}
+
